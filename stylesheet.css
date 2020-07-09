@@ -1,0 +1,475 @@
+/*Webpage*/
+/* (CSS Reference, 2020) */
+/* (CSS color codes & names, 2020) */
+
+
+html, body {
+	height: 100%;
+}
+
+.content-wrapper {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex-shrink: 0;
+}
+
+.center {
+	margin: auto;
+	width: 50%
+}
+
+
+/* Set background grey, set font and remove any white space on left*/
+body {
+	background-color: #e4e4e4;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+}
+
+/* Keep hyperlinks always black in colour, even after it is visited */
+a {
+	color:#000
+}
+
+p {
+	margin-left: 10px;
+	
+}
+
+h1 {
+	border-bottom:1px solid #000;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	background-color: white;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: large;
+	text-align: center;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: medium;
+	margin-left: 10px;
+}
+
+/* table headers */
+h4 {
+	font-weight: bold;
+	font-size: medium;
+	text-align: center;
+}
+
+/* sidebar titles */
+h5 {
+	font-weight: bold;
+	font-size: medium;
+	text-align: center;	
+	padding-top: 18px;
+	padding-bottom: 18px;
+	background-color: #e4e4e4;
+	margin : 0 auto;
+	white-space: nowrap;
+}
+
+span.line {
+	display: block;
+	width: 90%;
+	padding: 5px;  
+	margin-left: 7px;
+}
+
+footer {
+	padding-top: 10px;
+	padding-bottom: 25px;
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	background-color: black;
+	width: 100%;
+	
+}
+
+/* Index Page */
+/* (Ridiculously easy row and column layouts with Flexbox - DEV, 2020) */
+
+.formlayout {
+	background-color: white;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;	
+}
+
+.row-form{
+	
+}
+
+.row-headings {
+	background-color: #e4e4e4;
+}
+
+.row-submit {
+	text-align: center;
+}
+
+.row-briefinfo {
+	margin-top: 10px;
+	border-top: 1px solid #000;
+	background-color: #e4e4e4;
+}
+
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+}
+
+.double-column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 2;
+}
+
+.column-one {
+
+}
+
+.column-two {
+
+}
+
+/* (CSS Buttons, 2020) */
+
+.button {
+	cursor: pointer;
+	background-color: #E06B0B;
+	border: 2px solid #E06B0B;
+	color: white;
+	padding: 16px 32px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #E06B0B;
+  border: 2px solid #E06B0B;
+  padding: 16px 32px;
+  transition-duration: 0.4s;
+}
+
+/* (How To Create a Contact Form with CSS, 2020) */
+
+/* Using 'outline' affects spacing of select and textboxes, therefore 'border' is used for both. */
+/* 'outline' must be used on checkbox as 'border' does not affect the checkboxes */
+
+input[type=text], select{	
+	border: 1px solid black;	
+	background-color: white;
+	width: 250px;
+}
+
+/* (How To Create a Custom Checkbox and Radio Buttons, 2020) */
+/* Custom checkbox */
+/* Keeping checkbox consistent between browsers */
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+/* Hide default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+/* On mouse-over, add a darker grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #b3b3b3;
+}
+
+/* Create a block-level blank space*/
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+/* The check mark is the border of the block-level blank space rotated 45 degreees to form a tick */
+.container .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 3px;
+  height: 8px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* (Tryit Editor v3.6, 2020) */
+/* (working and Vanders, 2020) */
+
+ul.horizontal-list {
+	list-style-type: none;
+	text-align: center;
+	overflow: hidden;
+}
+
+li.horizontal-list {
+	float: none;
+	display: inline-block;
+	text-align: center;
+	padding-right: 20px;
+	padding-top: 2px;
+}
+
+/* (A Complete Guide to Flexbox | CSS-Tricks, 2020) */
+/* (Martsoukos, 2020) */
+
+.formlayout-component li,
+.formlayoutinner-component
+{
+	padding:2px 2px 5px 0.5em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-content: flex-start + ... safe;
+}
+
+.formlayout-component > li > label,
+.formlayoutinner-component li p {
+	flex: 1 0 50px;
+	max-width: 220px;
+}  
+
+.formlayout-colour li,
+.formlayoutinner-colour
+{
+	padding:2px 2px 2px 0.5em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start + ... safe;
+}
+
+.formlayout-colour > li > label,
+.formlayoutinner-colour li p {
+	flex: 1 0 50px;
+	max-width: 220px;
+} 
+
+
+/* results table page */
+/* (Accessible, Simple, Responsive Tables | CSS-Tricks, 2020) */
+
+/* Responsive table */
+
+/* Tables */
+.Rtable {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 3em 0;
+	padding: 0;
+}
+
+/* cell styling */
+.Rtable-cell {
+	box-sizing: border-box;
+	flex-grow: 1;
+	width: 100%;
+	padding: 0.8em 1.2em;
+	overflow: hidden; /* Or flex might break */
+	list-style: none;
+	border: 1px solid black;
+}
+
+/* Table column sizing */
+.Rtable--5cols > .Rtable-cell  { width: 20%; }
+
+
+/* Apply styles */
+
+.Rtable {
+	position: relative;
+	top: 3px;
+	left: 3px;
+}
+
+.Rtable-cell {
+	margin: -3px 0 0 -3px;
+	background-color: white;
+	border-color: #e4e4e4;
+}
+
+/* max-width 820px due to being the limit of table contents being hidden */
+
+@media all and (max-width: 820px) {
+	.Rtable--collapse  {
+		display: block;
+	}
+	.Rtable--collapse > .Rtable-cell--header {
+		/* hides table headers on smaller screens/windows */
+		display: none;
+	}
+    .Rtable--collapse > .Rtable-cell {
+		width: 100% !important;
+	}
+	.Rtable--collapse > .Rtable-cell--foot {
+		margin-bottom: 1em;
+	}	
+}	
+	
+/* Sidebar */
+/* (How To Create a Collapsed Sidebar, 2020) */
+
+.sidebar {
+	height: 100%;
+	width: 0; /* changed with JavaScript */
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color: white;
+	border-right: 2px solid black;
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 89px;
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.sidebar p {
+	/* text within sidebar (excluding headers) */
+	font-size: medium;
+	display: block;
+	padding: 5px;
+}
+
+/* toggle button */
+/* (CSS3 floating button material design tutorial, 2020) */
+.sidebar-toggle {
+	cursor: pointer;
+	background-color: #E06B0B;
+	border: 2px solid #E06B0B;
+	color: white;
+	padding: 16px 16px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.sidebar-toggle:hover {
+  background-color: white;
+  color: #E06B0B;
+  border: 2px solid #E06B0B;
+  padding: 16px 16px;
+  transition-duration: 0.4s;
+}
+
+.float{
+	position: fixed;
+	top: 89px;
+	transition: margin-left .5s;
+	z-index: 1;
+}
+
+/* button on sidebar positioning*/
+.button-sidebar {
+	margin-bottom: 100px; /* keeps button visible */
+	margin-left: 75px;
+}
+
+/* Push content to right */
+#main {
+	transition: margin-left .5s; 
+	flex: 1 0 auto;
+	min-height: 100%;
+	position: relative;
+}
+
+/* Close button for use where page width obstructs toggle button */
+.sidebar .closebtn {
+	position: absolute;
+	top: 0px;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	visibility: hidden; /* hidden for anything above 370px */  
+}
+
+/* Change sidebar and sidebar toggle for smaller screens */
+@media screen and (max-width: 370px) {
+	.sidebar {font-size: small;}
+	.sidebar {padding-top: 40px;}
+	.sidebar .closebtn {visibility: visible;}
+	.float {top: 130px;}
+	.button-sidebar {margin-bottom: 50px;}
+}
+
+/*
+
+CSS-Tricks. 2020. Accessible, Simple, Responsive Tables | CSS-Tricks. [online] Available at: <https://css-tricks.com/accessible-simple-responsive-tables/> [Accessed 14 May 2020].
+
+CSS-Tricks. 2020. A Complete Guide To Flexbox | CSS-Tricks. [online] Available at: <https://css-tricks.com/snippets/css/a-guide-to-flexbox/> [Accessed 14 May 2020].
+
+Rapidtables.com. 2020. CSS Color Codes & Names. [online] Available at: <https://www.rapidtables.com/web/css/css-color.html#gray> [Accessed 14 May 2020].
+
+W3schools.com. 2020. CSS Buttons. [online] Available at: <https://www.w3schools.com/css/css3_buttons.asp> [Accessed 14 May 2020].
+
+W3schools.com. 2020. CSS Reference. [online] Available at: <https://www.w3schools.com/cssref/default.asp> [Accessed 14 May 2020].
+
+AndroidCSS. 2020. CSS3 Floating Button Material Design Tutorial. [online] Available at: <http://androidcss.com/css/css3-floating-button-tutorial/> [Accessed 14 May 2020].
+
+W3schools.com. 2020. How To Create A Contact Form With CSS. [online] Available at: <https://www.w3schools.com/howto/howto_css_contact_form.asp> [Accessed 14 May 2020].
+
+W3schools.com. 2020. How To Create A Custom Checkbox And Radio Buttons. [online] Available at: <https://www.w3schools.com/howto/howto_css_custom_checkbox.asp> [Accessed 14 May 2020].
+
+Martsoukos, G., 2020. How To Build A Responsive Form With Flexbox. [online] Web Design Envato Tuts+. Available at: <https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767> [Accessed 14 May 2020].
+
+Dev.to. 2020. Ridiculously Easy Row And Column Layouts With Flexbox - DEV. [online] Available at: <https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01> [Accessed 14 May 2020].
+
+W3schools.com. 2020. Tryit Editor V3.6. [online] Available at: <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu> [Accessed 14 May 2020].
+
+working, C. and Vanders, R., 2020. CSS: How Can I Center A Horizontal List? Display:Inline Not Working. [online] Stack Overflow. Available at: <https://stackoverflow.com/questions/11304186/css-how-can-i-center-a-horizontal-list-displayinline-not-working> [Accessed 14 May 2020].
+
+
+*/

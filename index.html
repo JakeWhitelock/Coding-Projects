@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- (HTML head Elements, 2020) -->
+
+<title>School Uniform Database</title>
+
+<link rel		="stylesheet" 	href="stylesheet.css">
+<link rel		="icon"			href="images/favicon.ico">
+
+<meta charset	="UTF-8">
+<meta name		="description" 	content="School Unifrom Database">
+<meta name		="author" 		content="Jake Whitelock - S6034385">
+
+<!-- Set the viewport -->
+<meta name		="viewport"		content="width=device-width, initial scale=1.0">
+
+<body>
+	<div class="content-wrapper">
+
+		<h1> <a href=index.html> School Uniform Database </a> </h1>
+
+		<div class="formlayout">
+		    <div class="row-headings">
+				<div class="double-column">
+					<div class="column-one">
+						<h2>School badge description if able:</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row 2">
+				<div class="double-column">
+					<div class="column-one">
+						<form name="form" action="results.php" onsubmit="return validateForm()" method="get">
+						<ul class="horizontal-list">
+							<li class="horizontal-list">
+								<label for="emblem_shape">Emblem Shape:</label>
+									<select name="emblem_shape" >
+										<option value="">N/A</option>
+										<option value="Block">Block</option>
+										<option value="Round">Round</option>
+										<option value="Square">Square</option>
+									</select>
+							</li>
+							<li class="horizontal-list">
+								<label for="defining_feature">Defining Feature:</label>
+									<select name="defining_feature">
+										<option value="">N/A</option>
+										<option value="Birds">Birds</option>
+										<option value="Branch">Branch</option>
+										<option value="Bridge">Bridge</option>
+										<option value="Butterfly">Butterfly</option>
+										<option value="Castle">Castle</option>
+										<option value="Children">Children</option>
+										<option value="Church">Church</option>
+										<option value="Circle">Circle</option>
+										<option value="Cross">Cross</option>
+										<option value="Earth">Earth</option>
+										<option value="Hands">Hands</option>
+										<option value="House">House</option>
+										<option value="Just_text">Just Text</option>
+										<option value="Kite_Shield">Kite Shield</option>
+										<option value="Letter_M">Letter M</option>
+										<option value="Letter_N">Letter N</option>
+										<option value="Lion">Lion</option>
+										<option value="Owl">Owl</option>
+										<option value="Scepter">Scepter</option>
+										<option value="School">School</option>
+										<option value="Sextant">Sextant</option>
+										<option value="Shield_and_cross">Shield and Cross</option>
+										<option value="Ship">Ship</option>
+										<option value="Ship wheel">Ship wheel</option>
+										<option value="Spiral">Spiral</option>
+										<option value="Stick_figures">Stick Figures</option>
+										<option value="Sun">Sun</option>
+										<option value="Tilde">Tilde</option>
+										<option value="Tree">Tree</option>		
+										<option value="Unicorn">Unicorn</option>		
+									</select>
+							</li>
+							<li class="horizontal-list">
+								<label for="lettering_text">Lettering:</label>
+								<input type="text" name="lettering_text" placeholder="Lettering Text" >
+							</li>
+							<li class="horizontal-list">
+								<label for="emblem_text">Emblem Text:</label>
+								<input type="text" name="emblem_text" placeholder="Emblem Text">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row-headings">
+				<div class="double-column">
+					<div class="column-one">
+						<h2>School uniform description if able:</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row 4">
+				<div class="column">
+					<div class="column-one">				
+						<!-- Uniform Components -->
+						<ul class="formlayout-component">
+							<li>						
+								<label class="container" >Blazer
+									<input type="checkbox" name="checkbox_blazer" value="yes" >
+									<span class="checkmark"></span>
+								</label>
+							</li>
+							<li>
+								<label class="container" >Jumper
+									<input type="checkbox" name="checkbox_jumper" value="yes">
+									<span class="checkmark"></span>
+								</label>
+							</li>
+							<li>
+								<label class="container" >Cardigan
+									<input type="checkbox" name="checkbox_cardigan" value="yes">
+									<span class="checkmark"></span>
+								</label>
+							</li>
+							<li>
+								<label class="container" >Shirt
+									<input type="checkbox" name="checkbox_shirt" value="yes">
+									<span class="checkmark"></span>
+								</label>
+							</li>
+							<li>
+								<label class="container" >Polo Shirt
+									<input type="checkbox" name="checkbox_polo_shirt" value="yes">
+									<span class="checkmark"></span>
+								</label>
+							</li>
+							<li>
+								<label class="container" >Trousers
+									<input type="checkbox" name="checkbox_trousers" value="yes">
+									<span class="checkmark"></span>
+								</label>							
+							</li>
+							<li>
+								<label class="container" >Skirt
+									<input type="checkbox" name="checkbox_skirt" value="yes">
+									<span class="checkmark"></span>
+								</label>
+							</li>
+							<li>
+								<label class="container" >Check Dress
+									<input type="checkbox" name="checkbox_check_dress" value="yes">
+									<span class="checkmark"></span>
+								</label>
+							</li>
+							<li>
+								<label class="container" >Tie
+									<input type="checkbox" name="checkbox_tie" value="yes">
+									<span class="checkmark"></span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="column">
+					<div class="column-two">
+						<ul class="formlayout-colour">
+							<li>
+								<label for="blazer_colour">Blazer Colour:</label>
+								<input type="text" name="blazer_colour" placeholder="Blazer Colour">
+							</li>
+							<li>
+								<label for="jumper_colour">Jumper Colour:</label>
+								<input type="text" name="jumper_colour" placeholder="Jumper Colour">
+							</li>
+							<li>
+								<label for="cardigan_colour">Cardigan Colour:</label>
+								<input type="text" name="cardigan_colour" placeholder="Cardigan Colour">
+							</li>
+							<li>
+
+								<label for="shirt_colour">Shirt Colour:</label>
+								<input type="text" name="shirt_colour" placeholder="Shirt Colour">
+							</li>
+							<li>
+								<label for="polo_shirt_colour">Polo Shirt Colour:</label>
+								<input type="text" name="polo_shirt_colour" placeholder="Polo Shirt Colour">
+							</li>
+							<li>
+								<label for="trousers_colour">Trousers Colour:</label>
+								<input type="text" name="trousers_colour" placeholder="Trousers Colour">
+							</li>
+							<li>
+								<label for="skirt_colour">Skirt Colour:</label>
+								<input type="text" name="skirt_colour" placeholder="Skirt Colour">
+							</li>
+							<li>
+								<label for="check_dress_colour">Check Dress Colour:</label>
+								<input type="text" name="check_dress_colour" placeholder="Check Dress Colour">
+							</li>
+							<li>
+								<label for="tie_colour">Tie Colour:</label>
+								<input type="text" name="tie_colour" placeholder="Tie Colour">
+							</li>
+							<li>
+							<label for="tie_trim">Tie Trim:</label>
+							<input type="text" name="tie_trim" placeholder="Tie Trim">
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row-submit">
+				<div class="double-column">
+					<div class="column-one">
+						<button type="reset"  class="button" >Reset </button>
+						<button type="submit" class="button" >Submit</button>
+					</div>
+				</div>
+			</div>
+						</form>
+			<div class="row-briefinfo">
+				<div class="double-column">
+					<div class="column-one">
+						<h3>Brief Information</h3>
+						<p>
+						Entering "N/A" in both the Emblem shape and Defining feature will return all data within the database, provided they are the only two fields that are used. <br> <br>
+						The "Lettering" option is designed to allow you to enter any abbreviations or bold lettering that may be present in the school emblem. <br> <br>
+						The check boxes can be used as a wild card in order to get information on all clothing of that type and can be used in combination with other search options if you have other clothing types to search for. <br> <br>
+						The clothing text boxes can be used on their own, to specify a known colour for that article of clothing. This gives a specific response for any matches and can be used in combination with other fields for a more narrow set of results. <br> <br>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>	
+	
+	<footer class="footer">Teesside University 2020 BETA</footer>
+</body>
+
+		<!-- (JavaScript Form Validation, 2020) -->
+		<!-- (spaces, Crowder and Mehmudji, 2020) -->
+		<!-- validate form text inputs -->
+		<script>
+		function validateForm() {
+		
+			// get text input values
+			var Lettering = document.forms["form"]["lettering_text"].value;
+			var EmblemText = document.forms["form"]["emblem_text"].value;
+			var BlazerColour = document.forms["form"]["blazer_colour"].value;
+			var JumperColour = document.forms["form"]["jumper_colour"].value;
+			var CardiganColour = document.forms["form"]["cardigan_colour"].value;
+			var ShirtColour = document.forms["form"]["shirt_colour"].value;
+			var PoloShirtColour = document.forms["form"]["polo_shirt_colour"].value;
+			var TrousersColour = document.forms["form"]["trousers_colour"].value;
+			var SkirtColour = document.forms["form"]["skirt_colour"].value;
+			var CheckDressColour = document.forms["form"]["check_dress_colour"].value;
+			var TieColour = document.forms["form"]["tie_colour"].value;
+			var TieTrim = document.forms["form"]["tie_trim"].value;
+			
+			//error message
+			var errormessage = "Text inputs cannot contain white space. \n \nPlease remove from these text inputs: ";
+			var error = 1;
+			
+			//check user text box inputs, if contains whitespace dont submit form and add control name to error output.
+			if ( /\s/.test(Lettering)) {
+				errormessage = errormessage + "Lettering, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(EmblemText)) {
+				errormessage = errormessage + "Emblem Text, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(BlazerColour)) {
+				errormessage = errormessage + " Blazer Colour, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(JumperColour)) {
+				errormessage = errormessage + "Jumper Colour, ";
+				error = 0;
+			}	
+
+			
+			if ( /\s/.test(CardiganColour)) {
+				errormessage = errormessage + "Cardigan Colour, ";
+				error = 0;
+			}
+
+			if ( /\s/.test(ShirtColour)) {
+				errormessage = errormessage + "Shirt Colour, ";
+				error = 0;
+			}	
+			
+			if ( /\s/.test(PoloShirtColour)) {
+				errormessage = errormessage + "Polo Shirt Colour, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(TrousersColour)) {
+				errormessage = errormessage + "Trousers Colour, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(SkirtColour)) {
+				errormessage = errormessage + "Skirt Colour, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(CheckDressColour)) {
+				errormessage = errormessage + "Check Dress Colour, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(TieColour)) {
+				errormessage = errormessage + "Tie Colour, ";
+				error = 0;
+			}
+			
+			if ( /\s/.test(TieTrim)) {
+				errormessage = errormessage + "Tie Trim";
+				error = 0;
+			}			
+			
+			//show error message if error, and stop form submission
+			if ( error == 0 ) {
+				alert(errormessage);
+				return false
+			}
+		}
+		</script
+
+</html>
+
+<!-- References 
+
+W3schools.com. 2020. HTML Head Elements. [online] Available at: <https://www.w3schools.com/html/html_head.asp> [Accessed 14 May 2020].
+
+W3schools.com. 2020. Javascript Form Validation. [online] Available at: <https://www.w3schools.com/js/js_validation.asp> [Accessed 15 May 2020].
+
+spaces, D., Crowder, T. and Mehmudji, M., 2020. Detect If String Contains Any Spaces. [online] Stack Overflow. Available at: <https://stackoverflow.com/questions/17616624/detect-if-string-contains-any-spaces> [Accessed 15 May 2020].
+
+-->
